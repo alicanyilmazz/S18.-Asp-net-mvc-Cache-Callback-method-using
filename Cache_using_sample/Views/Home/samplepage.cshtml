@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>samplepage</title>
+</head>
+<body>
+    <div>
+        @if (HttpContext.Current.Cache["name"] != null)
+        {
+            var name = HttpContext.Current.Cache["name"].ToString();
+            <span>@name</span><br />
+        }
+        else
+        {
+            <span>There is not any "name" item.</span><br />
+        }
+       
+    </div>
+</body>
+</html>
